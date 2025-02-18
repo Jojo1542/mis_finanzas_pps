@@ -18,10 +18,12 @@ class IncomeController extends Controller
             [2300, '15/11/2024'],
             [1300, '15/01/2025'],
         ];
-        
+
         $title='Ingresos de USUARIO';
-        
-        return view('income.index',['incomes' => $incomes,'title' => $title]);
+
+        $headers = ["Dinero", "Fecha"];
+
+        return view('income.index',['incomes' => $incomes,'title' => $title, 'headers' => $headers]);
     }
 
     /**
